@@ -1,0 +1,112 @@
+{
+  "@type": "dcat:Dataset",
+  "accessLevel": "public",
+  "accrualPeriodicity": "R/P1Y",
+  "bureauCode": [
+    "018:10"
+  ],
+  "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Sarah Newman",
+    "hasEmail": "mailto:sarah.newman@ed.gov"
+  },
+  "dataQuality": true,
+  "description": "The Consolidated State Performance Report, 2008-09 (CSPR 2008-09), is part of the Consolidated State Performance Report (CSPR) program: a required annual reporting tool for each state, the Bureau of Indian Education, the District of Columbia, and Puerto Rico; program data is available since 2005-06 at <https://www2.ed.gov/admins/lead/account/consolidated/index.html>. CSPR 2008-09 (https://www2.ed.gov/admins/lead/account/consolidated/sy08-09part1/index.html; https://www2.ed.gov/admins/lead/account/consolidated/sy08-09part2/index.html) is a cross-sectional report that measures each state's progress towards implementation of the No Child Left Behind Act (NCLB) and the reporting instrument for state formula grant programs authorized by the Elementary and Secondary Education Act (ESEA) as amended by NCLB. The reporting was conducted using state education agencies' (SEAs) reports in the EDFacts online submission system. CSPR 2008-09 is a universe survey. The study's response rate was 100%. Key statistics include information on adequate yearly progress, state performance assessments, highly qualified teachers, public school choice and supplemental education services options.",
+  "distribution": [
+    {
+      "@type": "dcat:Distribution",
+      "accessURL": "https://eddataexpress.ed.gov/",
+      "description": "Consolidated State Performance Report, 2008-09 data available through ED Data Express",
+      "format": "API",
+      "title": "ED Data Express"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "accessURL": "https://www2.ed.gov/admins/lead/account/consolidated/sy08-09part1/index.html",
+      "description": "Consolidated State Performance Report, 2008-09 Part I data by state",
+      "title": "SY 2008-2009 Consolidated State Performance Reports Part I"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "accessURL": "https://www2.ed.gov/admins/lead/account/consolidated/sy08-09part2/index.html",
+      "description": "Consolidated State Performance Report, 2008-09 Part II data by state",
+      "title": "SY 2008-09 Consolidated State Performance Reports Part II"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "description": "District level data on the academic achievement results of state assessments in reading/language arts in a CSV file",
+      "downloadURL": "https://inventory.data.gov/dataset/5678fcd7-1418-48d4-9a4a-4bf9ebd5c057/resource/ebba7a9d-b38a-4825-9546-339ff7dcb3a1/download/userssharedsdfleaachvrsltsassessrlasy200809.csv",
+      "format": "CSV",
+      "mediaType": "text/csv",
+      "title": "userssharedsdfleaachvrsltsassessrlasy200809.csv"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "description": "state level data on the academic achievement results of state assessments in reading/language arts in a CSV file",
+      "downloadURL": "https://inventory.data.gov/dataset/ceddd972-83af-4ee8-93b0-db087d7883f7/resource/d00b9f82-fcfb-46f2-8c15-7208cfd9a0b4/download/achvmntrsltsstateassmtsrlasy200809.csv",
+      "format": "CSV",
+      "mediaType": "text/csv",
+      "title": "achvmntrsltsstateassmtsrlasy200809.csv"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "description": "District level data on the academic achievement results of state assessments in mathematics in a CSV file",
+      "downloadURL": "https://inventory.data.gov/dataset/d7e07d8a-3195-42bf-815e-4b7a7efcbe52/resource/0baec037-c9e0-4cf6-8744-8c5b98c702a9/download/userssharedsdflealvlachvmntrsltsforstateassmntsinmathssy200809.csv",
+      "format": "CSV",
+      "mediaType": "text/csv",
+      "title": "userssharedsdflealvlachvmntrsltsforstateassmntsinmathssy200809.csv"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "description": "state level data on the academic achievement results of state assessments in mathematics in a CSV file",
+      "downloadURL": "https://inventory.data.gov/dataset/4165d446-3bdf-4b8e-9310-ffe34737c19e/resource/89fec729-9ab9-43d5-8dcd-e65dfab2a17c/download/achvmntrsltsstateassmtsmathssy200809.csv",
+      "format": "CSV",
+      "mediaType": "text/csv",
+      "title": "achvmntrsltsstateassmtsmathssy200809.csv"
+    }
+  ],
+  "identifier": "OESE_2009001",
+  "issued": "2010-08-31",
+  "keyword": [
+    "Schools",
+    "Elementary and secondary education",
+    "Consolidated state performance report",
+    "Math proficiency",
+    "Reading/language proficiency",
+    "Highly qualified teachers",
+    "Learning environment",
+    "High school graduation",
+    "State activities",
+    "Grant monitoring",
+    "Program monitoring",
+    "ESEA programs"
+  ],
+  "landingPage": "https://www2.ed.gov/admins/lead/account/consolidated/index.html",
+  "language": [
+    "en-US"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "modified": "2016-09-27",
+  "programCode": [
+    "018:000"
+  ],
+  "publisher": {
+    "@type": "org:Organization",
+    "name": "Office of Elementary and Secondary Education",
+    "subOrganizationOf": {
+      "@type": "org:Organization",
+      "name": "U.S. Department of Education",
+      "subOrganizationOf": {
+        "@type": "org:Organization",
+        "name": "U.S. Government"
+      }
+    }
+  },
+  "references": [
+    "https://eddataexpress.ed.gov/faqs.cfm",
+    "https://eddataexpress.ed.gov/definitions.cfm"
+  ],
+  "spatial": "United States",
+  "temporal": "2009/2010",
+  "title": "Consolidated State Performance Report, 2008-09"
+}
