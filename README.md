@@ -11,9 +11,11 @@ We are going to also want to install elastic search in python
 First run the elasticsearch server by typing `elasticsearch`
 We are currently only indexing one directory of csv files
 To create an initial database please do:
+```
 $ ./main test
 $ ./main init
 $ ./main search [query term]
+```
 
 test will create a small index of a few dataset and respond to a query. Use this to make sure elastic search is working.
 init will create an index of one csv file in the data folder. 
