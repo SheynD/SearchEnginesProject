@@ -11,9 +11,9 @@ def search(term):
     source = []
     url = []
     for doc in res['hits']['hits']:
-        if doc['_source']['filename'] not in source:
-            source.append(doc['_source']['filename'])
-            for dataURL in doc['_source']['datasetDistribution']:
+        if doc['_source']['Filename'] not in source:
+            source.append(doc['_source']['Filename'])
+            for dataURL in doc['_source']['Distribution']:
                 url.append(dataURL)
 
     if(len(source)>0):
