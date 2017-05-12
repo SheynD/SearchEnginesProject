@@ -1,6 +1,6 @@
 # SearchEnginesProject
 The final project(s) for the course CSE 445, WWW Search Engines.
-## Instalation
+## Installation
 First we must make sure elastic search and kibana are installed.
 ```
 brew install elasticsearch
