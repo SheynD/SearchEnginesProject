@@ -8,12 +8,11 @@ s = Search(using=es)
 
 def search(term):
     res = es.search(index="_all", body={"query": {"query_string": {"query": term}}})
-    print("%d documents found" % res['hits']['total'])
     source = []
     for doc in res['hits']['hits']:
-        for file in doc['_source']['datasetDistribution']:
-            if file['title'] not in source:
-                source.append(file['title'])
+        if doc['_source']['filename'] not in source:
+            source.append(doc['_source']['filename'])
 
+    print("%d documents found" % len(source))
     print(json.dumps(source))
 
