@@ -26,6 +26,7 @@ init will create an index of one csv file in the data folder.
 Search will run a query on all indices in the database and return the corresponding csv files
 
 ## Next Steps
+- What kind of queries are we going to be issuing? Just simply "Alabama"? or is it more complex?
 - What are we doing with these responses?
 	- We have the ability to return:
 		- ``datasetName``
