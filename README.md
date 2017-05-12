@@ -29,6 +29,9 @@ test will create a small index of a few dataset and respond to a query. Use this
 init will create an index of one csv file in the data folder. 
 Search will run a query on all indices in the database and return the corresponding csv files
 
+## Data Set
+Here will be a Google Drive link to the full data set zip file
+
 ## Next Steps
 - What kind of queries are we going to be issuing? Just simply "Alabama"? or is it more complex?
 - What are we doing with these responses?
