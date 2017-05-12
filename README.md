@@ -3,8 +3,8 @@ The final project(s) for the course CSE 445, WWW Search Engines.
 ## Instalation
 First we must make sure elastic search and kibana are installed.
 
-``brew install elasticsearch``
-``brew install kibana``
+``brew install elasticsearch
+  brew install kibana``
 
 Python version must also be > 2.7
 We are going to also want to install elastic search in python
