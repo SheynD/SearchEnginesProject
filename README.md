@@ -2,17 +2,19 @@
 The final project(s) for the course CSE 445, WWW Search Engines.
 ## Instalation
 First we must make sure elastic search and kibana are installed.
-
-``brew install elasticsearch
-  brew install kibana``
-
+```
+brew install elasticsearch
+brew install kibana
+```
 Python version must also be > 2.7
 We are going to also want to install elastic search in python
-`` pip install elasticsearch``
+``pip install elasticsearch``
+
 ## Simple Usage
 First run the elasticsearch server by typing `elasticsearch`
 We are currently only indexing one directory of csv files
 To create an initial database please do:
+
 ```
 $ ./main test
 $ ./main init
@@ -24,8 +26,8 @@ init will create an index of one csv file in the data folder.
 Search will run a query on all indices in the database and return the corresponding csv files
 
 ## Next Steps
--What are we doing with these responses?
-	-We have the ability to return:
+- What are we doing with these responses?
+	- We have the ability to return:
 		- ``datasetName``
 		- ``datasetDescription``
 		- ``datasetDistribution``
