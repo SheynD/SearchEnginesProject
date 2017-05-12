@@ -67,6 +67,9 @@ def urlify(s):
 def searchDirec():
     DataPath = '../data'
     dataset_count = 0
+    if(os.path.exists(DataPath)==False):
+        print("Please put DataSets in the ../ directory called data")
+        return
     dirs = os.listdir(DataPath)
     for dir in dirs:
         jsonPath = os.path.join(DataPath, dir, 'meta.json')
