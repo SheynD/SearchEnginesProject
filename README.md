@@ -38,7 +38,7 @@ Search will run a query on all indices in the database and return the correspond
 		- ``keyword``
 		- ``filename``
 		- ``attrList``
-	-Should we have the JavaScript ask the user for a query, find the dataset, then a screen with description and link to the download?
+	- Should we have the JavaScript ask the user for a query, find the dataset, then a screen with description and link to the download?
 
 
 ## Useful Tools
