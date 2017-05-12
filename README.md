@@ -28,6 +28,7 @@ $ ./main search [query term]
 test will create a small index of a few dataset and respond to a query. Use this to make sure elastic search is working.
 init will create an index of one csv file in the data folder. 
 Search will run a query on all indices in the database and return the corresponding csv files
+A useful query term to see utility is `./main search "Alabama"
 
 ## Data Set
 Here will be a Google Drive link to the full data set zip file
