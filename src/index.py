@@ -3,6 +3,7 @@ import os
 import csv
 import json
 import sys
+import re
 
 from elasticsearch import Elasticsearch
 
@@ -26,15 +27,13 @@ def slice_list(input, size=30):
             remain -= 1
     return result
 
-def doIndex(indexname, input_data): 
+def createIndex(indexname, input_data): 
     res = es.index(index=indexname, doc_type='basetype', body=input_data)
     return res['created']
 
 def initIndex(indexname):
     if es.indices.exists(indexname):
-        print("deleting '%s' index..." % (indexname))
-        res = es.indices.delete(index = indexname)
-        print(" response: '%s'" % (res))
+        return False
     index_settings = {
         "settings": {
             "index.mapping.total_fields.limit": 5000
@@ -52,8 +51,18 @@ def initIndex(indexname):
     res = es.indices.create(index = indexname, body=index_settings)
     print(" response: '%s'" % (res))
 
+def removeIndex(indexname):
+    print("deleting '%s' index..." % (indexname))
+    res = es.indices.delete(index = indexname)
+    print(" response: '%s'" % (res))
 
+def urlify(s):
+    # Remove all non-word characters (everything except numbers and letters)
+    s = re.sub(r"[^\w\s]", '', s)
+    # Replace all runs of whitespace with a single dash
+    s = re.sub(r"\s+", '-', s)
 
+    return s.lower()
 
 def searchDirec():
     DataPath = '../data'
@@ -64,8 +73,13 @@ def searchDirec():
         if os.path.exists(jsonPath):
             metajson = json.load(open(jsonPath))
             print("Indexing DataSet: %s",dir)
-            indexname = "dataset" + str(dataset_count)
-            initIndex(indexname)
+            #indexname = "dataset" + str(dataset_count)
+            indexname = dir
+            indexname = urlify(indexname)
+
+            if initIndex(indexname)==False: 
+                print("dataset already exists. No need to index")
+                continue   
             dataset_count = dataset_count +1;
             for file_name in os.listdir(os.path.join(DataPath, dir)):
                 if file_name.endswith('.csv'):
@@ -78,16 +92,18 @@ def searchDirec():
                         dataslices = slice_list(dataList)
                         for index, datagroup in enumerate(dataslices):
                             input_data = {'data': datagroup}
-                            input_data['datasetName'] = metajson['title']
-                            input_data['datasetDescription'] = metajson['description']
-                            input_data['datasetDistribution'] = metajson['distribution']
-                            input_data['keyword'] = metajson['keyword']
-                            input_data['filename'] = file_name
-                            input_data['attrList'] = attrList
+                            input_data['Title'] = metajson['title']
+                            input_data['Description'] = metajson['description']
+                            input_data['Distribution'] = metajson['distribution']
+                            input_data['Keywords'] = metajson['keyword']
+                            input_data['LandingPage'] = metajson['landingPage']
+                            input_data['Publisher'] = metajson['publisher']
+                            input_data['Filename'] = file_name
+                            input_data['AttrList'] = attrList
                             # index name can be the name of dataset
                             # doc_type name doesn't matter.
                             print('indexing slices %s' % str(index))
-                            print(doIndex(indexname, input_data))
+                            print(createIndex(indexname, input_data))
 
 
 
