@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+import index
+
+def main():
+	print("lets index a document directory")
+	index.searchDirec()
+
+
+if __name__ == '__main__':
+	main()
