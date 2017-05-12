@@ -5,22 +5,59 @@ import search
 
 import sys
 
-def main():
-	
-	if len(sys.argv)<=1:
-		sys.exit(0)
-
+def doCommand():
 	if sys.argv[1]=="init":
 		print("lets index a document directory")
 		index.searchDirec()
+
 	if sys.argv[1]=="test":
 		print("lets test a small scale index and query")
 		test.simpleIndex()
+
 	if sys.argv[1]=="search":
 		if(len(sys.argv)==3):
-			print("Searching for %s", sys.argv[2])
+			print("Searching for %s" % sys.argv[2])
 			search.search(sys.argv[2])
 
+	if sys.argv[1]=="remove":
+		if(len(sys.argv)==3):
+			print("Remove index %s from database " % sys.argv[2])
+			index.removeIndex(sys.argv[2])
+
+def print_help():
+	help = """
+	Help Message for User
+
+	Elastic search is a quick way to index large amounts of datasets. Then query the database 
+	to return useful information. We have implemented a basic dataset search tool where the user
+	can initialize a database, then issue a simple phrase query. Elastic search will return with 
+	the dataset name. 
+
+	$ main [command] [parameters]
+
+		main init
+			This function will index any data sets inside the ../data folder. If an index already
+			exists for the dataSet, then it will be skipped. Be patient, this may take a while.
+
+		main test
+			Simply test tool to index some small simple dataSets and issue a basic query
+
+		main search
+			A basic phrase query tool used to query elastic search.
+			The returned results will be the dataSet names
+
+		main remove
+			Remove an index in the elastic search database
+	"""
+	print(help)
+
+
+
+def main():
+	if len(sys.argv)<=1:
+		print_help()
+		sys.exit(0)
+	doCommand()
 
 
 if __name__ == '__main__':
