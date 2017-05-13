@@ -19,6 +19,9 @@ def doCommand():
 			print("Searching for %s" % sys.argv[2])
 			search.search(sys.argv[2])
 
+	if sys.argv[1]=="agg":
+		search.searchUI()
+
 	if sys.argv[1]=="remove":
 		if(len(sys.argv)==3):
 			print("Remove index %s from database " % sys.argv[2])
