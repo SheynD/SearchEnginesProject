@@ -10,9 +10,9 @@ Python version must also be > 2.7
 We are going to also want to install elastic search in python
 ``pip install elasticsearch``
 
-Once we move to indexing all of the datasets we are going to run our of JVM heap space.
+Once we move to indexing all of the datasets we are going to run out of JVM heap space.
 A solution to this was to switch to 4GB of RAM. Change the `/usr/local/etc/elasticsearch/jvm.options`.
-Change the default `-Xms2g` & `-Xmx2g` to 4g each. Or half your RAM size.  
+Change the default `-Xms2g` & `-Xmx2g` to 4GB each. Or half your RAM size.  
 
 ## Simple Usage
 First run the elasticsearch server by typing `elasticsearch`
