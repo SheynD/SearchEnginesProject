@@ -54,6 +54,17 @@ Unfortunately, I see no other way around it. Make sure it is on, when using sear
 https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
 ```
 
+## Next Steps
+- Improve the UI. Add color. Add Checklist widget to fine tune returned data from the phrase query
+- Add some kind of visualization of the dataSets
+- Make the word cloud dynamic at runtime
+	- Use all terms in the data base as opposed to just keywords
+- Solve sharding issue, where different shards are returned, but the same index/dataset
+
+## Useful Tools
+- Kibana
+	- data visualization tool for elastic search
+	- https://www.elastic.co/products/kibana
 
 ## Data Set
 Here will be a Google Drive link to the full data set zip file
@@ -71,14 +82,3 @@ Here is a view only link to the final report document
 https://docs.google.com/document/d/1sICq0r2ryI05453QL4ahEkwxZNq6ZlWiNpSzrAdGGJs/edit?usp=sharing
 ```
 
-## Next Steps
-- Improve the UI. Add color. Add Checklist widget to fine tune returned data from the phrase query
-- Add some kind of visualization of the dataSets
-- Make the word cloud dynamic at runtime
-	- Use all terms in the data base as opposed to just keywords
-- Solve sharding issue, where different shards are returned, but the same index/dataset
-
-## Useful Tools
-- Kibana
-	- data visualization tool for elastic search
-	- https://www.elastic.co/products/kibana
