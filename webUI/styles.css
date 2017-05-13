@@ -1,0 +1,80 @@
+body {
+  font-family: Verdana;
+  font-size: 11pt;
+  background: #E4E6B7;
+  margin-left: 600px;
+}
+
+a.tag {
+text-transform:uppercase; 
+line-height:90%; 
+text-shadow: 0.1em 0.1em 0.1em #000000; 
+text-decoration:none; 
+font-family: verdana; 
+}
+
+table {
+  font-family: Verdana;
+  font-size: 9pt;
+  border: 0px solid black;
+}
+
+.field {
+  background: #F0F000;
+  border: 1px solid black;
+}
+
+th {
+  background: #FF9F00;
+  border: 1px solid black;
+}
+
+
+
+
+td {
+  border: 1px solid gray;
+}
+
+td.head{
+  border: 0px solid black;
+}
+
+textarea {
+  font-family: Verdana;
+  font-size: 11pt;
+  border: gray 1px solid;
+}
+
+input {
+  padding: 2px;
+  font-family: Verdana;
+  font-size: 11pt;
+  border: gray 1px solid;
+}
+
+select {
+  padding: 2px;
+  font-family: Verdana;
+  font-size: 11pt;
+  border: gray 1px solid;
+}
+
+.done {
+  background: #00E800;
+  text-align: center;
+}
+
+.high {
+  background: #FF2020;
+  text-align: center;
+}
+
+.hint {
+  color: #FF0000;
+  font-weight:bold
+}
+
+.center {
+  text-align: center;
+}
