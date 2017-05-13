@@ -60,6 +60,16 @@ Here will be a Google Drive link to the full data set zip file
 ```
 https://drive.google.com/open?id=0B0SxqlhtYz_kZjZra1hCQ3J3aGM
 ```
+## Presentation Slides
+Here is a view only link to the presentation slides
+```
+https://docs.google.com/a/lehigh.edu/presentation/d/1oeNqaNm83B4EkXaFWUom_kqKurgMqrn4sfy3CmLDSYc/edit?usp=sharing
+```
+## Final Report Document
+Here is a view only link to the final report document 
+```
+https://docs.google.com/document/d/1sICq0r2ryI05453QL4ahEkwxZNq6ZlWiNpSzrAdGGJs/edit?usp=sharing
+```
 
 ## Next Steps
 - Improve the UI. Add color. Add Checklist widget to fine tune returned data from the phrase query
