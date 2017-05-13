@@ -57,23 +57,16 @@ https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeac
 
 ## Data Set
 Here will be a Google Drive link to the full data set zip file
+```
+https://drive.google.com/open?id=0B0SxqlhtYz_kZjZra1hCQ3J3aGM
+```
 
 ## Next Steps
-- What kind of queries are we going to be issuing? Just simply "Alabama"? or is it more complex?
-- What are we doing with these responses?
-	- We have the ability to return:
-		- ``datasetName``
-		- ``datasetDescription``
-		- ``datasetDistribution``
-			- ``title``
-			- ``downloadURL``
-			- ``format``
-			- ``description``
-		- ``keyword``
-		- ``filename``
-		- ``attrList``
-	- Should we have the JavaScript ask the user for a query, find the dataset, then a screen with description and link to the download?
-
+- Improve the UI. Add color. Add Checklist widget to fine tune returned data from the phrase query
+- Add some kind of visualization of the dataSets
+- Make the word cloud dynamic at runtime
+	- Use all terms in the data base as opposed to just keywords
+- Solve sharding issue, where different shards are returned, but the same index/dataset
 
 ## Useful Tools
 - Kibana
