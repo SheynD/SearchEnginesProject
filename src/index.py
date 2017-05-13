@@ -12,7 +12,7 @@ es = Elasticsearch(timeout=500)
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-def slice_list(input, size=30):
+def partitionData(input, size=10):
     input_size = len(input)
     slice_size = input_size / size
     remain = input_size % size
@@ -66,24 +66,23 @@ def urlify(s):
 
 def searchDirec():
     DataPath = '../data'
-    dataset_count = 0
+    print(DataPath)
     if(os.path.exists(DataPath)==False):
         print("Please put DataSets in the ../ directory called data")
         return
     dirs = os.listdir(DataPath)
     for dir in dirs:
         jsonPath = os.path.join(DataPath, dir, 'meta.json')
+
         if os.path.exists(jsonPath):
             metajson = json.load(open(jsonPath))
             print("Indexing DataSet: %s",dir)
-            #indexname = "dataset" + str(dataset_count)
             indexname = dir
             indexname = urlify(indexname)
 
             if initIndex(indexname)==False: 
                 print("dataset already exists. No need to index")
                 continue   
-            dataset_count = dataset_count +1;
             for file_name in os.listdir(os.path.join(DataPath, dir)):
                 if file_name.endswith('.csv'):
                     filepath = os.path.join(DataPath, dir, file_name)
@@ -92,7 +91,7 @@ def searchDirec():
                         csv_file_object = csv.DictReader(f)
                         dataList = list(csv_file_object)
                         attrList = list(dataList[0].keys())
-                        dataslices = slice_list(dataList)
+                        dataslices = partitionData(dataList)
                         for index, datagroup in enumerate(dataslices):
                             input_data = {'data': datagroup}
                             input_data['Title'] = metajson['title']
